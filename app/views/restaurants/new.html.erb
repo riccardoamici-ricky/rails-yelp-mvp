@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Create a new restaurant</h1>
+  <%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.select :category, options_for_select(%w[chinese italian japanese french belgian]) %><br><br>
+  <%= f.submit "Post new restaurant", class: "btn btn-primary" %>
+  <% end %>
+</div>
